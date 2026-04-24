@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Capítulo 2 – Estruturando Páginas Web com HTML</title>
+</head>
+<body>
+
+  <h1>Capítulo 2 – Estruturando Páginas Web com HTML</h1>
+
+  <p>
+    HTML (HyperText Markup Language) é uma das três linguagens fundamentais do desenvolvimento
+    frontend, junto com CSS e JavaScript. Sua função é definir a <strong>estrutura</strong> das páginas web.
+  </p>
+
+  <hr />
+
+  <h2>2.1 Introdução</h2>
+
+  <h3>2.1.1 Versões principais</h3>
+  <ul>
+    <li><strong>HTML (1992)</strong> – Primeira versão, baseada em propostas de Tim Berners-Lee no CERN em 1989.</li>
+    <li><strong>HTML 4.0 (1997)</strong> – Versão em que o CSS foi introduzido.</li>
+    <li><strong>XHTML 1.0</strong> – Reformulação do HTML com base em regras mais rígidas do XML.</li>
+    <li><strong>HTML5 (2014)</strong> – Versão atual, com novas funcionalidades e APIs. Hoje mantida como "Living Standard" pelo W3C em colaboração com o WHATWG.</li>
+  </ul>
+
+  <h3>2.1.2 Elementos e Atributos</h3>
+  <p>
+    Cada <strong>elemento</strong> HTML possui uma tag de abertura e uma de fechamento.
+    Os <strong>atributos</strong> ficam na tag de abertura e passam informações adicionais ao elemento.
+  </p>
+  <p>Exemplo de elemento com atributo:</p>
+  <pre><code>&lt;a href="https://www.exemplo.com"&gt;Clique aqui&lt;/a&gt;</code></pre>
+
+  <figure>
+    <img
+      src="https://i.imgur.com/1vG0u0U.png"
+      alt="Diagrama mostrando a estrutura de um elemento HTML com atributo"
+      width="400"
+    />
+    <figcaption>Figura 2.2 – Estrutura de um elemento HTML com atributo</figcaption>
+  </figure>
+
+  <h3>2.1.3 Salvando Páginas como Documentos HTML</h3>
+  <p>
+    Páginas web são arquivos de texto simples com extensão <code>.html</code> ou <code>.htm</code>.
+    Para visualizá-las, basta abrir o arquivo em um navegador.
+    A maioria dos navegadores também oferece <strong>ferramentas de desenvolvedor</strong>
+    para inspecionar o código HTML de qualquer página.
+  </p>
+  
+  <figure>
+    <img
+      src="https://i.imgur.com/7Z84jKC.png"
+      alt="Uma pagina web no navegador"
+      width="400"
+    />
+    <figcaption>Figura 2.3 Web página simples em um navegador (Chrome)</figcaption>
+  </figure>
+
+  <hr />
+
+  <h2>2.2 Principais Elementos</h2>
+
+  <h3>2.2.1 Títulos, Parágrafos e Formatação de Texto</h3>
+  <p>
+    O HTML oferece seis níveis de títulos: <code>&lt;h1&gt;</code> (maior) até <code>&lt;h6&gt;</code> (menor).
+    Parágrafos são definidos com <code>&lt;p&gt;</code>.
+    Para formatação, usa-se <code>&lt;b&gt;</code> (negrito), <code>&lt;i&gt;</code> (itálico),
+    <code>&lt;em&gt;</code> (ênfase) e <code>&lt;strong&gt;</code> (forte).
+    Quebras de linha são inseridas com <code>&lt;br /&gt;</code>.
+  </p>
+
+  <h3>2.2.2 Listas</h3>
+  <p>Existem três tipos de listas em HTML:</p>
+
+  <h4>Lista Ordenada</h4>
+  <ol>
+    <li>Primeiro item</li>
+    <li>Segundo item</li>
+    <li>Terceiro item</li>
+  </ol>
+
+  <h4>Lista Não Ordenada</h4>
+  <ul>
+    <li>CSS – Cascading Style Sheets</li>
+    <li>HTML – HyperText Markup Language</li>
+    <li>JavaScript – linguagem de programação</li>
+  </ul>
+
+  <h4>Lista de Definição</h4>
+  <dl>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+    <dt>DOM</dt>
+    <dd>Document Object Model</dd>
+  </dl>
+
+  <h4>Listas Aninhadas</h4>
+  <p>É possível aninhar listas dentro de itens <code>&lt;li&gt;</code>:</p>
+  <ul>
+    <li>Frutas
+      <ul>
+        <li>Maçã</li>
+        <li>Pera</li>
+        <li>Morango</li>
+      </ul>
+    </li>
+    <li>Vegetais
+      <ul>
+        <li>Cenoura</li>
+        <li>Pimentão</li>
+        <li>Tomate</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>2.2.3 Links</h3>
+  <p>
+    Todos os tipos de links usam o elemento <code>&lt;a href=""&gt;</code>.
+    Há três categorias:
+  </p>
+  <ul>
+    <li><strong>Links externos</strong> – apontam para outros sites (URL completa).</li>
+    <li><strong>Links relativos</strong> – apontam para outras páginas do mesmo site (sem domínio).</li>
+    <li><strong>Links internos</strong> – apontam para outra seção da mesma página, usando âncoras com <code>#id</code>.</li>
+  </ul>
+  <p>Exemplo de link externo que abre em nova aba:</p>
+  <pre><code>&lt;a href="https://www.exemplo.com" target="_blank"&gt;Visitar site&lt;/a&gt;</code></pre>
+  <p>
+    Boas práticas recomendam usar textos de link descritivos, como
+    <em>"Detalhes do produto"</em>, em vez de termos vazios como <em>"Clique aqui"</em>.
+  </p>
+
+  <h3>2.2.4 Imagens</h3>
+  <p>
+    Imagens são incluídas com o elemento vazio <code>&lt;img&gt;</code>,
+    usando os atributos <code>src</code> (caminho da imagem) e <code>alt</code> (texto alternativo).
+    Desde o HTML5, é possível adicionar legenda usando <code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code>.
+  </p>
+  <pre><code>&lt;figure&gt;
+  &lt;img src="imagens/foto.jpg" alt="Descrição da imagem" /&gt;
+  &lt;figcaption&gt;Legenda da imagem&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+  <h3>2.2.5 Tabelas</h3>
+  <p>
+    Tabelas são definidas com <code>&lt;table&gt;</code>, linhas com <code>&lt;tr&gt;</code>,
+    células com <code>&lt;td&gt;</code> e células de cabeçalho com <code>&lt;th&gt;</code>.
+    Para tabelas longas, recomenda-se usar <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>
+    e <code>&lt;tfoot&gt;</code>. Células podem ser mescladas com
+    <code>colspan</code> (colunas) e <code>rowspan</code> (linhas).
+  </p>
+
+  <p>Exemplo de tabela simples de usuários:</p>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Riana</td>
+        <td>Fresh</td>
+        <td>District Assurance Producer</td>
+      </tr>
+      <tr>
+        <td>Oscar</td>
+        <td>Spielvogel</td>
+        <td>Product Optimization Analyst</td>
+      </tr>
+      <tr>
+        <td>Lynn</td>
+        <td>Berning</td>
+        <td>Lead Accountability Administrator</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Exemplo de mesclagem de colunas (<code>colspan</code>) e linhas (<code>rowspan</code>):</p>
+  <table border="1">
+    <tr>
+      <th></th>
+      <th>8h</th>
+      <th>9h</th>
+      <th>10h</th>
+      <th>11h</th>
+      <th>12h</th>
+    </tr>
+    <tr>
+      <th>Segunda</th>
+      <td colspan="2">Consulta médica</td>
+      <td>Videoconferência</td>
+      <td>Reunião com cliente</td>
+      <td>Almoço</td>
+    </tr>
+    <tr>
+      <th>Terça</th>
+      <td>Oficina</td>
+      <td colspan="3">Compras</td>
+      <td>Almoço</td>
+    </tr>
+    <tr>
+      <th>Quarta</th>
+      <td colspan="5">Férias</td>
+    </tr>
+  </table>
+  
+  <p>
+    <h4>A Listagem 2.12 e a Figura 2.11 mostram uma tabela simples para exibir usuários</h5>
+  </p>
+  
+  <figure>
+    <img
+      src="https://i.imgur.com/UPNenPe.png"
+      alt="Mostrando uma simples tabela em html"
+      width="400"
+    />
+    <figcaption>Figura 2.11 Exibição de usuários em uma tabela</figcaption>
+  </figure>
+  
+  <figure>
+    <img
+      src="https://i.imgur.com/WIX3l7y.png"
+      alt="Mostrando uma simples tabela em html, olhar do cliente"
+      width="400"
+    />
+    <figcaption>Figura 2.12 Representação de dados de tabela em HTML</figcaption>
+  </figure>
+
+  <h3>2.2.6 Formulários</h3>
+  <p>
+    Formulários são criados com o elemento <code>&lt;form&gt;</code>.
+    Os campos mais comuns incluem: campos de texto, senha, e-mail, radio buttons,
+    checkboxes, listas dropdown (<code>&lt;select&gt;</code>), áreas de texto (<code>&lt;textarea&gt;</code>)
+    e botão de envio. O elemento <code>&lt;label&gt;</code> adiciona rótulos acessíveis aos campos.
+  </p>
+
+  <form action="/servicos/processar" method="POST">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label>
+        Nome:
+        <input type="text" name="nome" size="20" maxlength="50" />
+      </label>
+      <br />
+      <label>
+        E-mail:
+        <input type="email" name="email" size="30" maxlength="70" />
+      </label>
+      <br />
+      <label>
+        Senha:
+        <input type="password" name="senha" size="20" maxlength="30" />
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>Questionário</legend>
+      <p>
+        <label for="navegador">Qual navegador você usa?</label>
+        <select id="navegador" name="navegador">
+          <option value="chrome">Google Chrome</option>
+          <option value="firefox">Mozilla Firefox</option>
+          <option value="edge">Microsoft Edge</option>
+          <option value="safari">Safari</option>
+        </select>
+      </p>
+      <p>
+        Você gosta do nosso site?<br />
+        <label><input type="radio" name="feedback" value="sim" /> Sim</label>
+        <label><input type="radio" name="feedback" value="nao" /> Não</label>
+      </p>
+      <p>
+        <label for="sugestoes">Sugestões de melhoria?</label><br />
+        <textarea id="sugestoes" name="sugestoes" rows="4" cols="40"></textarea>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" name="newsletter" />
+          Desejo receber a newsletter
+        </label>
+      </p>
+    </fieldset>
+    <br />
+    <input type="submit" value="Enviar formulário" />
+  </form>
+
+  <hr />
+
+  <h2>2.2.7 Informações Adicionais</h2>
+  <ul>
+    <li><strong>Elementos de bloco</strong> – iniciam em nova linha (ex: <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;ul&gt;</code>).</li>
+    <li><strong>Elementos inline</strong> – ficam na mesma linha (ex: <code>&lt;a&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;img&gt;</code>).</li>
+    <li><strong>Agrupamentos</strong> – <code>&lt;div&gt;</code> agrupa como bloco; <code>&lt;span&gt;</code> agrupa inline.</li>
+    <li><strong>Caracteres de escape</strong> – ex: <code>&amp;lt;</code> para &lt; e <code>&amp;gt;</code> para &gt;.</li>
+    <li><strong>Comentários</strong> – escritos com <code>&lt;!-- comentário --&gt;</code>.</li>
+    <li><strong>Metadados</strong> – definidos com <code>&lt;meta&gt;</code> dentro do <code>&lt;head&gt;</code>.</li>
+    <li><strong>Elementos estruturais (HTML5)</strong> – <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;section&gt;</code>.</li>
+  </ul>
+
+  <hr />
+
+  <h2>2.3 Resumo e Próximos Passos</h2>
+  <p>Os pontos-chave aprendidos neste capítulo:</p>
+  <ul>
+    <li>HTML é uma linguagem de marcação que define estrutura e semântica de páginas web.</li>
+    <li>Elementos HTML são compostos por tag de abertura e tag de fechamento.</li>
+    <li>Atributos passam informações adicionais à tag de abertura.</li>
+    <li>Alguns elementos são vazios e não contêm texto ou filhos.</li>
+    <li>Páginas HTML são arquivos de texto comuns.</li>
+    <li>Os elementos mais importantes incluem títulos, parágrafos, listas, links, imagens, tabelas e formulários.</li>
+  </ul>
+
+  <p>
+    O próximo passo é aprender <strong>CSS</strong>, a linguagem responsável por deixar
+    as páginas visualmente atraentes.
+  </p>
+
+  <hr />
+
+  <h2>Leituras Recomendadas</h2>
+  <ul>
+    <li><a href="https://wiki.selfhtml.org/" target="_blank">SelfHTML Wiki</a> – referência gratuita sobre HTML.</li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Mozilla Developer Network (MDN)</a> – documentação completa do HTML.</li>
+    <li><a href="https://html.spec.whatwg.org/" target="_blank">WHATWG Living Standard</a> – especificação oficial do HTML.</li>
+  </ul>
+
+</body>
+</html>
